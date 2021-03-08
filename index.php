@@ -23,3 +23,5 @@ $chaine = substr($message3, 5, $lenght);
 $remplace = str_replace("@#?", ' ', $chaine);
 echo strrev ($remplace);
 
+
+echo count( [ "john", "doe", [ "X", "Y" ], ] ); 
