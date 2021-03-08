@@ -1,27 +1,22 @@
 <?php
 
-$message1 = "0@sn9sirppa@#?ia'jgtvryko1";
-$message2 = "q8e?wsellecif@#?sel@#?setuotpazdsy0*b9+mw@x1vj";
-$message3 = "aopi?sgnirts@#?sedhtg+p9l!";
-$maReponse = "Réponse => ";
-echo $maReponse;
 
+$weapons = ['fists', 'whip', 'gun'];
+$ennemyWeapon = $weapons[rand(0,2)];
 
-$lenght = strlen($message1)/2; 
-$chaine = substr($message1, 5, $lenght);
-$remplace = str_replace("@#?", ' ', $chaine);
-echo  strrev ($remplace), ' ';
+echo "Arme de l'opposant: ".$ennemyWeapon. '  || ';
 
-$lenght = strlen($message2)/2;
-$chaine = substr($message2, 5, $lenght);
-$remplace = str_replace("@#?", ' ', $chaine);
-echo  strrev ($remplace), ' ' ;
-
-
-$lenght = strlen($message3)/2;
-$chaine = substr($message3, 5, $lenght);
-$remplace = str_replace("@#?", ' ', $chaine);
-echo strrev ($remplace);
-
-
-echo count( [ "john", "doe", [ "X", "Y" ], ] ); 
+if ($ennemyWeapon == 'fists')
+{
+    $indyWeapon = 'gun';
+    echo "Arme d'Indiana Jones: ".$indyWeapon;
+    // echo $indyWeapon;
+}
+elseif ($ennemyWeapon == "whip")
+{
+    $indyWeapon = 'fists';
+    echo "Arme d'Indiana Jones: ".$indyWeapon;}
+else
+{
+    $indyWeapon = 'whip';
+    echo "Arme d'Indiana Jones: ".$indyWeapon;}
