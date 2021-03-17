@@ -119,9 +119,9 @@ class Fighter
          }
         
          if($player2->getLife() > $player1->getLife()){
-             return $player2->getName().' a vaincu '.$player1->getName().PHP_EOL; 
+             return $player2->getName().'🏆 a vaincu '.$player1->getName().'💀'.PHP_EOL; 
          }elseif($player1->getLife() > $player2->getLife()){
-             return $player1->getName().' a vaincu '.$player2->getName().PHP_EOL;
+             return $player1->getName().'🏆 a vaincu '.$player2->getName().'💀'.PHP_EOL;
          }
     }
 }
