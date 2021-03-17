@@ -37,6 +37,74 @@ echo  $truck->truckLoading().PHP_EOL;
 echo ' Je rajoute encore '. $truck->setCurrentCharge(300).' cartons';
 echo $truck->truckLoading().PHP_EOL;
 
+/**
+ * 
+ * 
+ * RESULTAT:
+ * 
+ * ➜  quete-poo-2 git:(main) ✗ php index2.php
+###Velo###
+Je n'avance pas normal je suis à :  0 km/h
+Go !
+je roule à : 15 km/h
+Je freine !
+Je freine !
+Je freine !
+Maintenant je suis à l'arrêt je suis maitenant à 0 km/h
+-----------------------------------------------------------------------------
+###Voiture###
+Je n'avance pas normal je suis à :  0 km/h
+Moteur allumé !
+je roule à : 115 km/h
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Maintenant je suis à l'arrêt je suis maitenant à 0 km/h
+-----------------------------------------------------------------------------
+###Camion###
+Je n'avance pas normal je suis à :  0 km/h
+Mon camion possède une capacité de : 100
+Moteur allumé !
+je roule à : 65 km/h
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Je freine !
+Maintenant je suis à l'arrêt je suis maitenant à 0 km/h
+ Mon camion possède actuellement : 75 cartons
+In feeling
+ Je rajoute encore  cartonsIs full
+ */
+
 
 
 
