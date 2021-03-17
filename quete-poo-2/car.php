@@ -113,9 +113,8 @@
         while($this->currentSpeed > 0){
             $this->currentSpeed--;
             $sentence .= 'Brake !';
-            return $this->currentSpeed;
         }
-        $sentence .= 'I\'m stopped !';
+        return $sentence .= 'I\'m stopped !';
     }
 
     public function start()

@@ -22,4 +22,5 @@ $mclarenMercedesMp417->start();
 echo 'do not exceed  '.$mclarenMercedesMp417->getCurrentSpeed().' mph in the pits'.PHP_EOL; 
 $mclarenMercedesMp417->forward();
 echo 'After the last corner you are at '.$mclarenMercedesMp417->getCurrentSpeed().' mph'.PHP_EOL;
-echo 'Now u are at '.$mclarenMercedesMp417->brake().' mph'.PHP_EOL; 
+$mclarenMercedesMp417->brake();
+echo 'Safety car Kimi, Safety car break in the P3'.$mclarenMercedesMp417->getCurrentSpeed().' mph'.PHP_EOL; 
