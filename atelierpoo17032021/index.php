@@ -37,10 +37,10 @@ require 'fighter.php';
 
 
 /////// METHODE DEGEULASSE POUR LE BONUS ///////
-// $heracles = new Fighter('🧔 Héracles',20,6);
-// $lionDeNeme = new Fighter('🦁 Lion de Némée', 11, 13);
+$heracles = new Fighter('🧔 Héracles',20,6);
+$lionDeNeme = new Fighter('🦁 Lion de Némée', 11, 13);
 
-// $partie0001 = new Fighter('','','');
-// echo $partie0001->isDead($heracles, $lionDeNeme);
-// echo '-------------------------'.PHP_EOL;
+$partie0001 = new Fighter('','','');
+echo $partie0001->isDead($heracles, $lionDeNeme);
+echo '-------------------------'.PHP_EOL;
 

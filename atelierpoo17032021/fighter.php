@@ -88,12 +88,18 @@ class Fighter
     }
 
 
-    /**
-     * attaquant qui attaque sa cible !!!!!!!!!!!
-     */
     public function fight(Fighter $target)
     {
             $pointsDamage = $this->getDamage() - $target->getDefense();
+
+            /**
+             * 
+             * abs() != de l'ABS sur la voiture
+             * 
+             * Retourne une valeure absolue du nombre passé en param
+             * ex -6 => 6
+             * https://www.php.net/manual/fr/function.abs.php
+             */
             $newLifePtsTarget = $target->getLife() - abs($pointsDamage);
 
             return $target->setLife($newLifePtsTarget);
