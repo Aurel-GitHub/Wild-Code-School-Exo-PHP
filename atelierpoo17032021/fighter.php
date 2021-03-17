@@ -108,6 +108,7 @@ class Fighter
 
     public function isDead(Fighter $player1, Fighter $player2)
     {
+        $player1->fight($player2);
         while($player1->getLife() != 0 && $player2->getLife() != 0){
             $player1->fight($player2);
             $player2->fight($player1);

@@ -33,14 +33,13 @@ require 'fighter.php';
 //  }elseif($heracles->getLife() > $lionDeNeme->getLife()){
 //      echo $heracles->getName().' a vaincu '.$lionDeNeme->getName().PHP_EOL;
 //  }
-// echo '-------------------------'.PHP_EOL;
+
 
 
 /////// METHODE DEGEULASSE POUR LE BONUS ///////
-$heracles = new Fighter('🧔 Héracles',20,6);
-$lionDeNeme = new Fighter('🦁 Lion de Némée', 11, 13);
+// $heracles = new Fighter('🧔 Héracles',20,6);
+// $lionDeNeme = new Fighter('🦁 Lion de Némée', 11, 13);
+// echo $heracles->isDead($heracles, $lionDeNeme);
 
-$partie0001 = new Fighter('','','');
-echo $partie0001->isDead($heracles, $lionDeNeme);
-echo '-------------------------'.PHP_EOL;
+// echo '-------------------------'.PHP_EOL;
 
