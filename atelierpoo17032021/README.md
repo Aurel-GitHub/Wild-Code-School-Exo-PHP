@@ -62,7 +62,7 @@ Pour le moment, le score de défense correspond tout simplement à la dextérit�
     ```
     nouveaux points de vie de la cible = points de vie actuels de la cible – (dommage de l’attaquant – défense de la cible)
     ```
-    sachant que `(dommage de l’attaquant – défense de l’attaqué)` ne doit pas être négatif.
+    sachant que `(dommage de l’attaquant – défense de la cible)` ne doit pas être négatif.
 
 Voilà, ta classe est prête, tu n’as plus qu’à l’utiliser !
 
