@@ -111,13 +111,14 @@ class Fighter
         $round = 1;
 
         while($player1->getLife() > 0 && $player2->getLife() > 0){
-            echo ':::::::On est au round n°'.++$round.':::::::::'.PHP_EOL;
+
+            echo PHP_EOL.':::::::On est au round n°'.++$round.':::::::::'.PHP_EOL;
 
             $player1->fight($player2);
             echo $player1->getName().' attaque '.$player2->getName().PHP_EOL;
             $player2->fight($player1);
             echo $player2->getName().' attaque '.$player1->getName().PHP_EOL;
-            /** feed bar */
+
             echo  'il reste '.$player1->getLife().' points de vie'.' a '.$player1->getName().PHP_EOL;
             echo  'il reste '.$player2->getLife().' points de vie'.' a '.$player2->getName().PHP_EOL;
          }
