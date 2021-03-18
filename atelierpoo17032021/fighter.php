@@ -65,9 +65,9 @@ class Fighter
 
     public function setLife(int $life)
     {
-        if($life >= 0 && $life <= 100 ){
+        if ($life >= 0 && $life <= 100) {
             $this->life = $life;
-        }else{
+        } else {
             return $this;
         }
     }
@@ -83,35 +83,25 @@ class Fighter
 
     public function getDamage():int
     {
-        $var = rand(1,$this->getStrength());
-        return $var;   
+        $var = rand(1, $this->getStrength());
+        return $var;
     }
 
 
     public function fight(Fighter $target)
     {
-            $pointsDamage = $this->getDamage() - $target->getDefense();
+        $pointsDamage = $this->getDamage() - $target->getDefense();
 
-            /**
-             * 
-             * abs() != de l'ABS sur la voiture
-             * 
-             * Retourne une valeure absolue du nombre passé en param
-             * ex -6 => 6
-             * https://www.php.net/manual/fr/function.abs.php
-             */
-            $newLifePtsTarget = $target->getLife() - abs($pointsDamage);
+        $newLifePtsTarget = $target->getLife() - abs($pointsDamage);
 
-            return $target->setLife($newLifePtsTarget);
-      
+        return $target->setLife($newLifePtsTarget);
     }
 
     public function isDead(Fighter $player1, Fighter $player2)
-    {   
+    {
         $round = 1;
 
-        while($player1->getLife() > 0 && $player2->getLife() > 0){
-
+        while ($player1->getLife() > 0 && $player2->getLife() > 0) {
             echo PHP_EOL.':::::::On est au round n°'.++$round.':::::::::'.PHP_EOL;
 
             $player1->fight($player2);
@@ -121,12 +111,12 @@ class Fighter
 
             echo  'il reste '.$player1->getLife().' points de vie'.' a '.$player1->getName().PHP_EOL;
             echo  'il reste '.$player2->getLife().' points de vie'.' a '.$player2->getName().PHP_EOL;
-         }
+        }
         
-         if($player2->getLife() > $player1->getLife()){
-             return $player2->getName().'🏆 a vaincu '.$player1->getName().'💀'.PHP_EOL; 
-         }elseif($player1->getLife() > $player2->getLife()){
-             return $player1->getName().'🏆 a vaincu '.$player2->getName().'💀'.PHP_EOL;
-         }
+        if ($player2->getLife() > $player1->getLife()) {
+            return $player2->getName().'🏆 a vaincu '.$player1->getName().'💀'.PHP_EOL;
+        } elseif ($player1->getLife() > $player2->getLife()) {
+            return $player1->getName().'🏆 a vaincu '.$player2->getName().'💀'.PHP_EOL;
+        }
     }
 }
