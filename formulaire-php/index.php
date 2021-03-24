@@ -49,12 +49,13 @@ if ($_POST) {
         $statement->bindValue(':message', $message, PDO::PARAM_STR);
         $statement->execute();
 
-        header('Location: succes.php');
+        header('Location: thanks.php');
          
         
         
         
     } else {
+        header('Location: error.php');
         $_SESSION['erreur'] = "Le formulaire est incomplet et ou incorrect !!";
     }  
 }
@@ -81,6 +82,7 @@ if ($_POST) {
     }
 ?>
 </div>
+    <div class="col-6">
     <div class="form-group" style="padding-bottom: 1%;">
         <label for="firstname">Nom</label>
         <input   type="text" id="firstname" name="firstname" class="form-control">
@@ -110,22 +112,22 @@ if ($_POST) {
     <label for="exampleFormControlTextarea1">Message</label>
     <textarea   class="form-control" id="message" name="message" placeholder="Votre message ici ..." style="width: 25%;"></textarea>
 </div>
-    <button class="btn btn-outline-success">Créer</button>
-    <br> 
+    <button class="btn btn-outline-success">Créer</button> 
+</form>
+<br>
 <div  class="test" style="padding-left: 50%;text-align:center">Liste :
 
-<?php
+    <?php
 
-$sql2 = "SELECT * FROM friend ";
-$statement = $pdo->query($sql2);
-$lists = $statement->fetchAll();    
+    $sql2 = "SELECT * FROM friend ";
+    $statement = $pdo->query($sql2);
+    $lists = $statement->fetchAll();    
 
-foreach ($lists as $list) { 
-    echo '<li>'. $list['firstname'].' '.$list['lastname'].'</li>';   
-}
-?>
+    foreach ($lists as $list) { 
+        echo '<li>'. $list['firstname'].' '.$list['lastname'].'</li>';   
+    }
+    ?>
 </div>
-</form>
 
 </body>
 </html>
