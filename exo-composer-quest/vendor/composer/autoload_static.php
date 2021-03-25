@@ -9,14 +9,24 @@ class ComposerStaticInit26024b2b58b384a1789f8cb8a7763af7
     public static $prefixLengthsPsr4 = array (
         'A' => 
         array (
-            'Acme\\' => 5,
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Acme\\' => 
+        'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'HelloWorld' => 
+            array (
+                0 => __DIR__ . '/..' . '/ehime/hello-world/src',
+            ),
         ),
     );
 
@@ -25,6 +35,7 @@ class ComposerStaticInit26024b2b58b384a1789f8cb8a7763af7
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit26024b2b58b384a1789f8cb8a7763af7::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit26024b2b58b384a1789f8cb8a7763af7::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit26024b2b58b384a1789f8cb8a7763af7::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
