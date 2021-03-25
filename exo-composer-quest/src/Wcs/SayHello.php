@@ -1,6 +1,6 @@
 <?php
 
-namespace HelloWorld;
+namespace App\Wcs;
 
 class SayHello
 {

@@ -3,8 +3,7 @@
 use App\Wcs\Hello;
 use HelloWorld\SayHello;
 
-require './vendor/autoload.php';
-require './Wcs/hello.php';
+require '../vendor/autoload.php';
 
 
 $test = new Hello();
