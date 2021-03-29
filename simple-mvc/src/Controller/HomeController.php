@@ -1,9 +1,13 @@
 <?php
 
+/**
+ * Created by PhpStorm.
+ * User: aurelwcs
+ * Date: 08/04/19
+ * Time: 18:40
+ */
 
 namespace App\Controller;
-
-
 
 class HomeController extends AbstractController
 {
@@ -17,29 +21,12 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        /** exo I */
-        // $name = 'John Doe';
-        // return $this->twig->render('hello/index.html.twig', [
-        //     'name' => $name
-        // ]);
+        $products = ['product1', 'product2', 'product3', 'product4', 'product5'];
 
-        /** Exo  II */
-        $persons = [
-            ['name' => 'riri', 'age' => 10 ],
-            ['name' => 'fifi', 'age' => 20],
-            ['name' => 'loulou' , 'age'=> 30]
-        ];
-
-        foreach($persons as $person)
-        {
-            $person['name'].' '. $person['age'];
-        }
-
-
-        var_dump($person['age']);die;
-
-        return $this->twig->render('hello/person.html.twig', [
+        return $this->twig->render('Home/index.html.twig', [
+            'products' => $products
         ]);
-
     }
+
+
 }

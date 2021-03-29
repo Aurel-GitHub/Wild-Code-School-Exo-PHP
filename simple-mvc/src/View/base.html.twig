@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="/assets/images/favicon.png">
+    
+{% block stylesheet %}
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+{% endblock %}
+
+</head>
+
+<body>
+
+    {% block content %}{% endblock %}
+
+    {% block javascript %}
+
+{% endblock %}
+
+</body>
+
+</html>
